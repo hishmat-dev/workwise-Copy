@@ -40,7 +40,7 @@ function MarketPlaceSection() {
     <ParallaxSection
       bgColor="bg-slate-900"
       overlay="bg-gradient-to-br from-slate-900/90 to-slate-900/70"
-      className="py-24"
+      className="py-12"
     >
       <div className="container px-4 md:px-6 mx-auto">
         
@@ -57,12 +57,7 @@ function MarketPlaceSection() {
         />
 
         <div className="text-center mb-16 relative">
-          <RevealOnScroll animation="fade-down" delay={100}>
-            <span className="inline-block px-4 py-1 rounded-full bg-vivid-cerise/20 text-vivid-cerise text-sm font-medium mb-4">
-              Global Trading
-            </span>
-          </RevealOnScroll>
-
+          
           <RevealOnScroll animation="fade-up" delay={200}>
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">
               <GradientText from="from-vivid-cerise" to="to-bright-sun">
@@ -190,12 +185,12 @@ function MarketPlaceSection() {
               })}
             </div>
 
-            <RevealOnScroll animation="fade-up" delay={1100} className="mt-8">
+            {/* <RevealOnScroll animation="fade-up" delay={1100} className="mt-8">
               <button className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-vivid-cerise to-bright-sun hover:from-bright-sun hover:to-vivid-cerise text-white font-medium rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 group">
                 Explore Marketplace
                 <ArrowRight className="ml-2 h-5 w-5 transform group-hover:translate-x-1 transition-transform duration-300" />
               </button>
-            </RevealOnScroll>
+            </RevealOnScroll> */}
           </div>
         </div>
       </div>

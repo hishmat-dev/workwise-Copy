@@ -12,20 +12,20 @@ function Footer() {
     { name: "Mac", icon: mac },
   ]
   return (
-    <footer className="py-12 bg-gray-700 text-slate-300">
-      <div className="container px-4 md:px-6 mx-auto">
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-center">
-          <div className="mb-6 md:mb-0">
-            <img src={logo} alt="WORKWISE Logo" className="h-24 w-auto" />
+    <footer className="pb-6 bg-gray-700 text-slate-300">
+      <div className="container px-1 md:px-2 mx-auto">
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-stretch">
+          <div className=" md:mb-0">
+            <img src={logo} alt="WORKWISE Logo" className="h-52 w-auto" />
 
-            <p className="mt-2 text-sm text-slate-400">
+            <p className=" text-sm text-slate-400">
               Work from anywhere the way it should be
               <br />
               Easy • Effective • Efficient
             </p>
           </div>
 
-          <div className="pt-4 md:pt-0 flex items-center justify-center md:justify-end gap-6">
+          <div className="pt-4 md:pt-0 flex items-end justify-end md:justify-end gap-6">
             {storeLinks.map((store, index) => (
               <div
                 key={index}

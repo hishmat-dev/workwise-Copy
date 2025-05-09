@@ -36,7 +36,7 @@ function CustomerCentricSection() {
   ]
 
   return (
-    <section className="relative py-24 overflow-hidden">
+    <section className="relative py-12 overflow-hidden">
    
       <div className="absolute inset-0 bg-gradient-to-br from-bright-sun/5 via-white to-blue-hosta/5 -z-10"></div>
 

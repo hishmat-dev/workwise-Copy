@@ -15,7 +15,7 @@ function DifferenceSection() {
   ]
 
   return (
-    <ParallaxSection bgColor="bg-gradient-to-br from-waikawa-grey/10 via-white to-vivid-cerise/10" className="py-24">
+    <ParallaxSection bgColor="bg-gradient-to-br from-waikawa-grey/10 via-white to-vivid-cerise/10" className="py-12">
       <div className="container px-4 md:px-6 mx-auto">
         <div className="text-center mb-16">
           <RevealOnScroll animation="fade-down" delay={100}>
@@ -45,8 +45,8 @@ function DifferenceSection() {
           <div className="order-2 lg:order-1">
             <RevealOnScroll animation="fade-right" delay={400}>
               <GlassCard background="bg-white/80" blur="backdrop-blur-lg" className="p-8 relative ">
-                <Quote className=" text-waikawa-grey/10 h-32 w-32 -top-10 -left-10" />
-                <div className="relative z-10">
+                <Quote className=" text-waikawa-grey/10 h-16 w-16 -top-10 -left-10" />
+                <div className="relative">
                   <p className="text-xl md:text-2xl text-slate-700 italic leading-relaxed">
                     "Today's workforce is under siege by a flood of communications apps. More than ever, our attention
                     is scattered across a wide array of different apps and communications channels. These apps are meant
@@ -61,8 +61,6 @@ function DifferenceSection() {
                   </div>
                   
                 </div>
-
-                {/* Decorative elements */}
                 <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-waikawa-grey to-vivid-cerise"></div>
               </GlassCard>
             </RevealOnScroll>

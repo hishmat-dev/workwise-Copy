@@ -34,7 +34,7 @@ function SolutionAvailabilitySection() {
   ]
 
   return (
-    <section className="relative py-24 overflow-hidden">
+    <section className="relative py-12 overflow-hidden">
       {/* Background elements */}
       <div className="absolute inset-0 bg-gradient-to-br from-slate-100 to-white -z-10"></div>
 

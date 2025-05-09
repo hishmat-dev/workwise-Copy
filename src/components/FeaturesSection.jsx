@@ -48,7 +48,7 @@ function FeaturesSection() {
   ]
 
   return (
-    <section id="features-section" ref={featuresRef} className="py-20 bg-gradient-to-b from-slate-50 to-white">
+    <section id="features-section" ref={featuresRef} className="py-12 bg-gradient-to-b from-slate-50 to-white">
       <div className="container px-4 md:px-6 mx-auto">
         <div
           className={`text-center mb-16 transition-all duration-700 ${isFeaturesVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
