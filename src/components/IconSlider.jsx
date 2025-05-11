@@ -1,18 +1,18 @@
 import React from 'react';
 
 const modules = [
-  { icon: "https://workw.com/static/media/News%20Feed.39a4e27ce8d085fd12239c9105e2d300.svg" },
-  { icon: "https://workw.com/static/media/Schedules.201f16a1c7e5e002f028d81ca96386c2.svg" },
-  { icon: "https://workw.com/static/media/Messenger.63d53f09d8938f3393b6736e906c183a.svg" },
-  { icon: "https://workw.com/static/media/Travel.07e4191311ead4b827dfa30bca97f853.svg" },
-  { icon: "https://workw.com/static/media/folder.284b44d67616ac0cf9af2431e9d72193.svg" },
-  { icon: "https://workw.com/static/media/Projects.61cb6e89238005785f31f20dda3c29bb.svg" },
-  { icon: "https://workw.com/static/media/Expenses.bd31b743524bd6ab5aaa3a6aa5117786.svg" },
-  { icon: "https://workw.com/static/media/Tasks.587227158fc83719bd4b3741dcbd51c2.svg" },
-  { icon: "https://workw.com/static/media/voucher.d2e0583e43775bea39086d76fc9373c9.svg" },
-  { icon: "https://workw.com/static/media/Appraisals.5f733237e87beab2e1e11eab39ec356d.svg" },
-  { icon: "https://workw.com/static/media/rewardIcon.1872d27791f08290da2b85977f16cf07.svg" },
-  { icon: "https://workw.com/static/media/chartAccountsIcon.aeba4763829d93cab322f702239b7183.svg" },
+  { title: "News Feed", icon: "https://workw.com/static/media/News%20Feed.39a4e27ce8d085fd12239c9105e2d300.svg" },
+  { title: "Schedules", icon: "https://workw.com/static/media/Schedules.201f16a1c7e5e002f028d81ca96386c2.svg" },
+  { title: "Messenger", icon: "https://workw.com/static/media/Messenger.63d53f09d8938f3393b6736e906c183a.svg" },
+  { title: "Travel", icon: "https://workw.com/static/media/Travel.07e4191311ead4b827dfa30bca97f853.svg" },
+  { title: "Folder", icon: "https://workw.com/static/media/folder.284b44d67616ac0cf9af2431e9d72193.svg" },
+  { title: "Projects", icon: "https://workw.com/static/media/Projects.61cb6e89238005785f31f20dda3c29bb.svg" },
+  { title: "Expenses", icon: "https://workw.com/static/media/Expenses.bd31b743524bd6ab5aaa3a6aa5117786.svg" },
+  { title: "Tasks", icon: "https://workw.com/static/media/Tasks.587227158fc83719bd4b3741dcbd51c2.svg" },
+  { title: "Voucher", icon: "https://workw.com/static/media/voucher.d2e0583e43775bea39086d76fc9373c9.svg" },
+  { title: "Appraisals", icon: "https://workw.com/static/media/Appraisals.5f733237e87beab2e1e11eab39ec356d.svg" },
+  { title: "Reward", icon: "https://workw.com/static/media/rewardIcon.1872d27791f08290da2b85977f16cf07.svg" },
+  { title: "Chart Accounts", icon: "https://workw.com/static/media/chartAccountsIcon.aeba4763829d93cab322f702239b7183.svg" },
 ];
 
 const IconSlider = () => {

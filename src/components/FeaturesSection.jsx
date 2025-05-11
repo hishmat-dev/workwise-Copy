@@ -1,87 +1,224 @@
-import { useIntersectionObserver } from "../hooks/useIntersectionObserver"
-import Expense from "../components/assets/features/Expense&Travel.svg"
-import Finance from "../components/assets/features/Finance&More.svg" //
-import HR from "../components/assets/features/HRManagement.svg"
-import ProjectManagement from "../components/assets/features/ProjectManagement.svg" //
-import Schedule from "../components/assets/features/Schedules&Deadlines.svg" //
+import { ChevronRight, Check, ArrowRight } from "lucide-react"
+import RevealOnScroll from "./ui/RevealOnScroll"
+import GradientText from "./ui/GradientText"
+import FloatingElement from "./ui/FloatingElement"
+
+import Expense from "../components/assets/features/Expense&Travel.svg";
+import Finance from "../components/assets/features/Finance&More.svg";
+import HR from "../components/assets/features/HRManagement.svg";
+import ProjectManagement from "../components/assets/features/ProjectManagement.svg";
+import Schedule from "../components/assets/features/Schedules&Deadlines.svg";
 
 function FeaturesSection() {
-  const [featuresRef, isFeaturesVisible] = useIntersectionObserver({ threshold: 0.1 })
-
   const features = [
     {
       title: "Flexible Project Management",
-      description: "Providing you with the tools for the art of planning, organising and managing resources to achieve specific goals and objectives within a defined time frame. Our solution provides you simple views in order to get your attention to details which otherwise maybe overlooked, clear objectives and collaboration among the team members to ensure that all project activities are aligned with the over all project goals.",
-      gradient: "from-blue-hosta to-medium-turquoise",
+      description:
+        "Plan, organize, and manage resources to meet goals within a defined timeframe. Get clear views of tasks, align objectives, and enhance team collaboration.",
+      gradient: "from-blue-hosta to-to-white",
       icon: ProjectManagement,
+      benefits: [
+        "Task assignment and tracking",
+        "Timeline visualization",
+        "Resource allocation",
+        "Progress reporting"
+      ],
+      delay: 0,
     },
     {
       title: "Finance & More",
-      description: "In order to ensure the stability and sustainability of the organization finance plays a crucial role. Workwise is equipped with the architecture to maintain accurate financial records while making it easy to cater to payroll, expenses, invoicing and more.",
-      gradient: "from-medium-turquoise to-waikawa-grey",
+      description:
+        "Manage finances with ease. Track payroll, expenses, and invoicing while ensuring financial stability with real-time reports.",
+      gradient: "from-medium-turquoise to-white",
       icon: Finance,
+      benefits: [
+        "Payroll management",
+        "Expense tracking",
+        "Invoicing",
+        "Real-time financial reporting"
+      ],
+      delay: 100,
     },
     {
       title: "Schedule & Deadlines",
-      description: "Workwise handles all the essentials for coordinating your tasks, assigning responsibilities, and ensuring that every task is completed on time with reminders and ongoing notifications. Our solution prioritises tasks and manages your time effectively.",
-      gradient: "from-waikawa-grey to-vivid-cerise",
+      description:
+        "Coordinate tasks, assign responsibilities, and track deadlines with reminders and effective time management.",
+      gradient: "from-vivid-cerise to-white",
       icon: Schedule,
+      benefits: [
+        "Task prioritization",
+        "Real-time reminders",
+        "Deadline tracking",
+        "Effective time management"
+      ],
+      delay: 200,
     },
     {
       title: "Digital Archives",
-      description: "A vital component for any business is its data and the management of that data. Our solution not only allows you to create that data but provides the ease of storage and retrieval of various types of documents. On Workwise you are able to maintain the previous versions while making sure the up to date records are the ones in circulation with alerts being generated to let team members know to check for changes. With Workwise you get a complete office suit allowing you to create all sorts of documents whether is be a simple note, spreadsheet, mindmap or more.",
-      gradient: "from-waikawa-grey to-vivid-cerise",
+      description:
+        "Store, retrieve, and manage documents efficiently with version control and notifications for updates and changes.",
+      gradient: "from-medium-turquoise to-vivid-cerise",
       icon: Schedule,
+      benefits: [
+        "Document creation",
+        "Version control",
+        "Easy document retrieval",
+        "Change notifications"
+      ],
+      delay: 300,
     },
     {
       title: "Expense & Travel",
-      description: "A simple solution to manage all business expenses effectively whether incurred by the company or employees. With a complete approval flow process which ensure the expenses are legitimate. The solution provides you the real-time visibility into spending trends. Additionally within the travel space creating a more detailed expense view and management, from the approval of the travel to the point of completion of the travel with all expenses in between accounted and accordingly approved.",
-      gradient: "from-waikawa-grey to-vivid-cerise",
+      description:
+        "Track and approve business expenses with real-time visibility. Manage travel expenses from approval to completion.",
+      gradient: "from-bright-sun to-blue-hosta",
       icon: Expense,
+      benefits: [
+        "Expense tracking and approval",
+        "Real-time spending visibility",
+        "Detailed travel expense management",
+        "Approval workflow automation"
+      ],
+      delay: 400,
     },
     {
       title: "HR Management",
-      description: "In the business world, HR is a critical department within every organisation. Workwise, as a solution, offers a seamless resource management experience with a meticulously designed solution. From onboarding, salary management, rewards, bonuses, promotions, attendance, performance calibrations, warnings, Workwise covers it all and more. It empowers you to efficiently manage your time and resources to maximise efficiencies while keeping your team motivated and updated at all times.",
+      description:
+        "Efficiently manage employee onboarding, payroll, attendance, and performance with a seamless HR solution.",
       gradient: "from-waikawa-grey to-vivid-cerise",
       icon: HR,
-    },
-  ]
+      benefits: [
+        "Onboarding management",
+        "Salary and compensation tracking",
+        "Attendance and performance tracking",
+        "Employee rewards and promotions"
+      ],
+      delay: 500,
+    }
+  ];
+  
+  
+  
 
   return (
-    <section id="features-section" ref={featuresRef} className="py-12 bg-gradient-to-b from-slate-50 to-white">
+    <section id="features-section" className="relative py-12 overflow-hidden">
+      {/* Background elements */}
+      <div className="absolute inset-0 bg-gradient-to-br from-slate-50 to-white -z-10"></div>
+
+      {/* Decorative elements */}
+      <div className="absolute top-0 left-0 w-full h-64 bg-gradient-to-b from-blue-hosta/5 to-transparent -z-5"></div>
+      <div className="absolute bottom-0 right-0 w-full h-64 bg-gradient-to-t from-vivid-cerise/5 to-transparent -z-5"></div>
+
+      {/* Animated dots pattern */}
+      <div className="absolute inset-0 -z-5">
+        <svg className="absolute w-full h-full" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <pattern id="dots-pattern" width="30" height="30" patternUnits="userSpaceOnUse">
+              <circle cx="2" cy="2" r="1" fill="rgba(0,0,0,0.05)" />
+            </pattern>
+          </defs>
+          <rect width="100%" height="100%" fill="url(#dots-pattern)" />
+        </svg>
+      </div>
+
       <div className="container px-4 md:px-6 mx-auto">
-        <div
-          className={`text-center mb-16 transition-all duration-700 ${isFeaturesVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
-        >
-          <h2 className="text-3xl md:text-4xl font-bold text-waikawa-grey">Key Features</h2>
-          <p className="mt-4 text-lg text-slate-600 max-w-3xl mx-auto">
-            Designed with your team's productivity and collaboration in mind
-          </p>
+        <div className="text-center mb-16">
+          <RevealOnScroll animation="fade-down" delay={100}>
+            <span className="inline-block px-4 py-1 rounded-full bg-blue-hosta/10 text-blue-hosta text-sm font-medium mb-4">
+              Powerful Features
+            </span>
+          </RevealOnScroll>
+
+          <RevealOnScroll animation="fade-up" delay={200}>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              <GradientText from="from-blue-hosta" via="via-waikawa-grey" to="to-vivid-cerise">
+                Key Features
+              </GradientText>
+            </h2>
+          </RevealOnScroll>
+
+          <RevealOnScroll animation="fade-up" delay={300} className="max-w-3xl mx-auto">
+            <p className="text-lg text-slate-600">Designed with your team's productivity and collaboration in mind</p>
+          </RevealOnScroll>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
           {features.map((feature, index) => (
-            <div
-              key={index}
-              className={`relative rounded-xl border bg-white text-card-foreground shadow h-full overflow-hidden transition-all hover:cursor-pointer hover:scale-105 duration-700 ${isFeaturesVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
-              style={{ transitionDelay: `${index * 50}ms` }}
-            >
-              <div className={`absolute top-0 left-0 w-full h-1 bg-gradient-to-r ${feature.gradient}`}></div>
-              <div className="p-6">
-                <div className="flex items-center justify-start gap-3 mb-2">
-                  <img
-                    src={feature.icon}
-                    alt={feature.title}
-                    className="w-12 h-12"
-                  />
-                  <h3 className="text-xl font-bold text-slate-900">{feature.title}</h3>
-                </div>
-                <p className="text-slate-600">{feature.description}</p>
+            <RevealOnScroll key={index} animation="zoom-in" delay={400 + feature.delay} className="h-full">
+              <div className="relative h-full group">
+                {/* Hover glow effect */}
+                <div
+                  className={`absolute -inset-0.5 bg-gradient-to-r ${feature.gradient} rounded-2xl opacity-0 group-hover:opacity-100 blur-lg transition-opacity duration-1000`}
+                ></div>
 
+                <div className="relative bg-white rounded-2xl shadow-lg border hover:cursor-pointer border-slate-100 p-6 h-full flex flex-col">
+                  {/* Feature header */}
+                  <div className="mb-3">
+                    <div className="flex flex-row align-middle items-center justify-start gap-6">
+                      <FloatingElement
+                        className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${feature.gradient} flex items-center justify-center mb-2`}
+                        xRange={5}
+                        yRange={5}
+                        rotateRange={3}
+                        speed={5}
+                        delay={index * 200}
+                      >
+                        <img src={feature.icon || "/placeholder.svg"} alt={feature.title} className="h-8 w-8" />
+                      </FloatingElement>
+
+                      <h3 className="text-xl font-bold text-slate-900 mb">{feature.title}</h3>
+                    </div>
+
+                    <p className="text-slate-600">{feature.description}</p>
+                  </div>
+
+                  {/* Feature benefits */}
+                  <div className="mt-auto">
+                    <div className="pt-4 border-t border-slate-100">
+                      <p className="font-medium text-slate-900 mb-3">Key Benefits:</p>
+                      <ul className="space-y-2">
+                        {feature.benefits.map((benefit, i) => (
+                          <li key={i} className="flex items-start gap-2">
+                            <div
+                              className={`flex-shrink-0 w-5 h-5 rounded-full bg-gradient-to-br ${feature.gradient} flex items-center justify-center mt-0.5`}
+                            >
+                              <Check className="h-3 w-3 text-white" />
+                            </div>
+                            <span className="text-slate-700">{benefit}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+
+
+                  </div>
+
+                </div>
               </div>
-            </div>
+            </RevealOnScroll>
           ))}
         </div>
+
+        {/* CTA Section */}
+        <RevealOnScroll animation="fade-up" delay={1000}>
+          <div className="relative">
+            <div className="absolute -inset-4 bg-gradient-to-r from-blue-hosta/20 via-waikawa-grey/20 to-vivid-cerise/20 rounded-3xl blur-xl"></div>
+
+            <div className="relative bg-white rounded-2xl shadow-xl border border-slate-100 p-8 md:p-12">
+              <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+                <div>
+                  <h3 className="text-2xl md:text-3xl font-bold text-slate-900 mb-4">Ready to explore all features?</h3>
+                  <p className="text-lg text-slate-600">Discover how WORKWISE can transform your team's productivity</p>
+                </div>
+
+                <button className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-hosta to-vivid-cerise hover:from-vivid-cerise hover:to-blue-hosta text-white font-medium rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 group">
+                  Get Started Now
+                  <ArrowRight className="ml-2 h-5 w-5 transform group-hover:translate-x-1 transition-transform duration-300" />
+                </button>
+              </div>
+            </div>
+          </div>
+        </RevealOnScroll>
       </div>
     </section>
   )

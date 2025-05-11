@@ -143,10 +143,7 @@ function SolutionAvailabilitySection() {
             <p className="text-lg text-slate-600 mb-4">
               <strong>Workwise</strong> is easy to access via web browser or any mobile platform i.e. iOS and android.
             </p>
-            <button className="relative overflow-hidden px-8 py-4 bg-gradient-to-r from-blue-hosta to-waikawa-grey text-white font-medium rounded-full shadow-lg group">
-              <span className="relative z-10">Try It Now</span>
-              <div className="absolute inset-0 bg-gradient-to-r from-vivid-cerise to-bright-sun opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-            </button>
+          
           </RevealOnScroll>
         </div>
       </div>

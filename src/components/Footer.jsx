@@ -14,7 +14,7 @@ function Footer() {
   return (
     <footer className="pb-6 bg-gray-700 text-slate-300">
       <div className="container px-1 md:px-2 mx-auto">
-        <div class="flex flex-col md:flex-row justify-between items-start md:items-stretch">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-stretch">
           <div className=" md:mb-0">
             <img src={logo} alt="WORKWISE Logo" className="h-52 w-auto" />
 

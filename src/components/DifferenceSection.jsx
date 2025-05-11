@@ -44,14 +44,13 @@ function DifferenceSection() {
           {/* Left side - Quote */}
           <div className="order-2 lg:order-1">
             <RevealOnScroll animation="fade-right" delay={400}>
-              <GlassCard background="bg-white/80" blur="backdrop-blur-lg" className="p-8 relative ">
-                <Quote className=" text-waikawa-grey/10 h-16 w-16 -top-10 -left-10" />
+              <GlassCard background="bg-white/80" blur="backdrop-blur-lg" className="p-8 relative">
                 <div className="relative">
-                  <p className="text-xl md:text-2xl text-slate-700 italic leading-relaxed">
-                    "Today's workforce is under siege by a flood of communications apps. More than ever, our attention
-                    is scattered across a wide array of different apps and communications channels. These apps are meant
-                    to bolster our productivity, but managing myriad apps is proving difficult—with serious
-                    repercussions for businesses."
+                  <Quote className="absolute top-0 left-0 text-waikawa-grey/10 h-12 w-12 " />
+                  <p className="text-xl md:text-2xl text-slate-700 italic leading-relaxed pl-16">
+                    "Today's workforce is under siege by a flood of communications apps. More than ever, our attention is scattered
+                    across a wide array of different apps and communications channels. These apps are meant to bolster our
+                    productivity, but managing myriad apps is proving difficult—with serious repercussions for businesses."
                   </p>
                   <div className="mt-8 flex justify-end">
                     <div>
@@ -59,11 +58,13 @@ function DifferenceSection() {
                       <p className="text-slate-600">CMO, RingCentral</p>
                     </div>
                   </div>
-                  
                 </div>
+
+                {/* Gradient line */}
                 <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-waikawa-grey to-vivid-cerise"></div>
               </GlassCard>
             </RevealOnScroll>
+
 
             <RevealOnScroll animation="fade-up" delay={600} className="mt-8">
               <GlassCard
@@ -88,7 +89,7 @@ function DifferenceSection() {
             <RevealOnScroll animation="fade-left" delay={400}>
               <div className="relative">
                 <div className="absolute -inset-4 bg-gradient-to-r from-waikawa-grey/20 to-vivid-cerise/20 rounded-3xl blur-3xl"></div>
-                <div className="relative bg-white rounded-3xl p-8 shadow-xl border border-slate-100">
+                <div className="relative bg-white rounded-3xl p-7 shadow-xl border border-slate-100">
                   <h3 className="text-2xl font-bold text-slate-900 mb-8 flex items-center">
                     <span className="w-8 h-8 rounded-full bg-waikawa-grey flex items-center justify-center text-white mr-3">
                       <CheckCircle className="h-5 w-5" />
@@ -99,7 +100,7 @@ function DifferenceSection() {
                   <div className="grid grid-cols-1 gap-3">
                     {differences.map((item, index) => (
                       <RevealOnScroll key={index} animation="fade-up" delay={500 + index * 100}>
-                        <div className="flex items-start gap-4 p-4 rounded-xl hover:bg-slate-50 transition-colors duration-300 group">
+                        <div className="flex items-start gap-4 p-4 rounded-xl hover:bg-slate-50 hover:cursor-pointer transition-colors duration-300 group">
                           <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-gradient-to-br from-waikawa-grey to-vivid-cerise flex items-center justify-center transform group-hover:rotate-6 transition-all duration-300">
                             <CheckCircle className="h-6 w-6 text-white" />
                           </div>
