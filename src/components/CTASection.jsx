@@ -1,5 +1,7 @@
 import { useIntersectionObserver } from "../hooks/useIntersectionObserver"
 import keyImage from "../components/assets/keyImage.svg"
+import RevealOnScroll from "./ui/RevealOnScroll"
+import GradientText from "./ui/GradientText"
 
 function CTASection() {
   const [ctaRef, isCTAVisible] = useIntersectionObserver({ threshold: 0.1 })
@@ -17,9 +19,13 @@ function CTASection() {
               isCTAVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"
             }`}
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-waikawa-grey">
-              Unlock The Power of Your Organization Now!
+            <RevealOnScroll animation="fade-up" delay={200}>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              <GradientText from="from-blue-hosta" via="via-waikawa-grey" to="to-vivid-cerise">
+                Unlock The Power of Your Organization Now!
+              </GradientText>
             </h2>
+          </RevealOnScroll>
             <p className="text-lg text-slate-600">
               Register for a 14 day free trial and get the opportunity to get the maximum out of your teams while reducing the work load.
               After the trial as low as only $15 per user per month. Start Your Free Trial Now!

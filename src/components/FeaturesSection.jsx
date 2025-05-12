@@ -103,7 +103,7 @@ function FeaturesSection() {
   return (
     <section id="features-section" className="relative py-12 overflow-hidden">
       {/* Background elements */}
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-50 to-white -z-10"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-slate-800 via-slate-700 to-slate-800 -z-10"></div>
 
       {/* Decorative elements */}
       <div className="absolute top-0 left-0 w-full h-64 bg-gradient-to-b from-blue-hosta/5 to-transparent -z-5"></div>
@@ -130,15 +130,15 @@ function FeaturesSection() {
           </RevealOnScroll>
 
           <RevealOnScroll animation="fade-up" delay={200}>
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              <GradientText from="from-blue-hosta" via="via-waikawa-grey" to="to-vivid-cerise">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
+              <GradientText from="from-vivid-cerise" to="to-bright-sun">
                 Key Features
               </GradientText>
             </h2>
           </RevealOnScroll>
 
           <RevealOnScroll animation="fade-up" delay={300} className="max-w-3xl mx-auto">
-            <p className="text-lg text-slate-600">Designed with your team's productivity and collaboration in mind</p>
+            <p className="text-lg text-white">Designed with your team's productivity and collaboration in mind</p>
           </RevealOnScroll>
         </div>
 
@@ -151,7 +151,7 @@ function FeaturesSection() {
                   className={`absolute -inset-0.5 bg-gradient-to-r ${feature.gradient} rounded-2xl opacity-0 group-hover:opacity-100 blur-lg transition-opacity duration-1000`}
                 ></div>
 
-                <div className="relative bg-white rounded-2xl shadow-lg border hover:cursor-pointer border-slate-100 p-6 h-full flex flex-col">
+                <div className="relative bg-gray-800 rounded-2xl shadow-lg border hover:cursor-pointer border-slate-500 p-6 h-full flex flex-col">
                   {/* Feature header */}
                   <div className="mb-3">
                     <div className="flex flex-row align-middle items-center justify-start gap-6">
@@ -166,16 +166,16 @@ function FeaturesSection() {
                         <img src={feature.icon || "/placeholder.svg"} alt={feature.title} className="h-8 w-8" />
                       </FloatingElement>
 
-                      <h3 className="text-xl font-bold text-slate-900 mb">{feature.title}</h3>
+                      <h3 className="text-xl font-bold text-slate-200 mb">{feature.title}</h3>
                     </div>
 
-                    <p className="text-slate-600">{feature.description}</p>
+                    <p className="text-slate-200">{feature.description}</p>
                   </div>
 
                   {/* Feature benefits */}
                   <div className="mt-auto">
                     <div className="pt-4 border-t border-slate-100">
-                      <p className="font-medium text-slate-900 mb-3">Key Benefits:</p>
+                      <p className="font-medium text-slate-400 mb-3">Key Benefits:</p>
                       <ul className="space-y-2">
                         {feature.benefits.map((benefit, i) => (
                           <li key={i} className="flex items-start gap-2">
@@ -184,7 +184,7 @@ function FeaturesSection() {
                             >
                               <Check className="h-3 w-3 text-white" />
                             </div>
-                            <span className="text-slate-700">{benefit}</span>
+                            <span className="text-slate-300">{benefit}</span>
                           </li>
                         ))}
                       </ul>
@@ -204,11 +204,11 @@ function FeaturesSection() {
           <div className="relative">
             <div className="absolute -inset-4 bg-gradient-to-r from-blue-hosta/20 via-waikawa-grey/20 to-vivid-cerise/20 rounded-3xl blur-xl"></div>
 
-            <div className="relative bg-white rounded-2xl shadow-xl border border-slate-100 p-8 md:p-12">
+            <div className="relative bg-gray-700 rounded-2xl shadow-xl border border-slate-100 p-8 md:p-12">
               <div className="flex flex-col md:flex-row items-center justify-between gap-8">
                 <div>
-                  <h3 className="text-2xl md:text-3xl font-bold text-slate-900 mb-4">Ready to explore all features?</h3>
-                  <p className="text-lg text-slate-600">Discover how WORKWISE can transform your team's productivity</p>
+                  <h3 className="text-2xl md:text-3xl font-bold text-slate-300 mb-4">Ready to explore all features?</h3>
+                  <p className="text-lg text-slate-400">Discover how WORKWISE can transform your team's productivity</p>
                 </div>
 
                 <button className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-hosta to-vivid-cerise hover:from-vivid-cerise hover:to-blue-hosta text-white font-medium rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 group">
