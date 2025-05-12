@@ -51,7 +51,7 @@ function DifferenceSection() {
                 style={{ transitionDelay: "600ms" }}
               >
                 {/* Quote Icon - Outside top-left of card content */}
-                <Quote className="absolute -top-6 -left-6 text-waikawa-grey/10 h-16 w-16 z-10" />
+                <Quote className="absolute -top-6 -left-6 text-waikawa-grey h-16 w-16 z-10" />
 
                 {/* Card Content */}
                 <div className="relative z-20">

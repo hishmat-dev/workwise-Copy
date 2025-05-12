@@ -131,25 +131,8 @@ function LoginForm() {
           </div>
         </div>
       </div>
-      <div className="mt-6 p-2 flex flex-col shadow-xl bg-white/90 backdrop-blur-sm border-0 rounded-xl">
+      <div className="mt-6 mb-6 p-2 flex flex-col shadow-xl bg-white/90 backdrop-blur-sm border-0 rounded-xl">
       
-        {/* <div className="flex flex-row flex-wrap justify-center gap-2">
-          {modules.map((mod, i) => (
-            <div
-              key={i}
-              className="flex items-center justify-center p-2  cursor-pointer hover:-translate-y-1 transition-transform duration-200 bg-white"
-              title={mod.name}
-            >
-              <img
-                src={mod.icon}
-                alt={mod.name}
-                className="h-6 w-6 object-contain"
-                width={24}
-                height={24}
-              />
-            </div>
-          ))}
-        </div> */}
         <IconSlider/>
 
       </div>

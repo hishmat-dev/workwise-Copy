@@ -34,45 +34,51 @@ function HeroSection() {
         >
           <div className="space-y-2">
             <div
-              className={`flex items-center justify-center lg:justify-start mb-16 transition-all duration-700 ${isHeroVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+              className={`flex items-center justify-center lg:justify-start mt-2 mb-6 transition-all duration-700 ${isHeroVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
               style={{ transitionDelay: "300ms" }}
             >
-              <img  src={logo} alt="WORKWISE Logo" className="h-80 w-auto" />
+              <img src={logo} alt="WORKWISE Logo" className="h-80 w-auto" />
             </div>
 
-            <h1
-              className={`text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-slate-900 transition-all duration-700 ${isHeroVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
-              style={{ transitionDelay: "400ms" }}
-            >
-              Corporate Social{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-hosta to-vivid-cerise">
-                Solution
-              </span>
-            </h1>
+            <div>
+              <h1
+                className={`text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-slate-900 transition-all duration-700 ${isHeroVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+                style={{ transitionDelay: "400ms" }}
+              >
 
-            <p
-              className={`max-w-[600px] mx-auto lg:mx-0 text-base text-slate-600 transition-all duration-700 ${isHeroVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-hosta to-vivid-cerise">
+                  Corporate Social Solution
+                </span>
+              </h1>
+            </div>
+
+            <div
+              className={`flex flex-col lg:flex-row items-center justify-between mt-8 mb-6 gap-6 max-w-[800px] mx-auto transition-all duration-700 ${isHeroVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+                }`}
               style={{ transitionDelay: "500ms" }}
             >
-              Work from home the way it should be
-            </p>
-            <p
-              className={`max-w-[600px] mx-auto lg:mx-0 text-base font-semibold text-slate-600 transition-all duration-700 ${isHeroVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
-              style={{ transitionDelay: "500ms" }}
-            >
-              Easy • Effective • Efficient
-            </p>
-          </div>
-
-          <div
-            className={`flex flex-col sm:flex-row gap-4 justify-center lg:justify-start transition-all duration-700 ${isHeroVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
-            style={{ transitionDelay: "600ms" }}
-          >
-            <button className="inline-flex items-center justify-center px-8 py-3 rounded-full bg-gradient-to-r from-blue-hosta to-medium-turquoise hover:from-medium-turquoise hover:to-blue-hosta text-white font-medium transition-all duration-200">
-              Get Started <ChevronRight className="ml-2 h-4 w-4" />
-            </button>
             
+              <div className="flex flex-col text-center lg:text-left w-full lg:w-auto">
+                <p className="text-base text-slate-600">
+                  Work from home the way it should be
+                </p>
+                <p className="text-base font-semibold text-slate-600">
+                  Easy • Effective • Efficient
+                </p>
+              </div>
+
+              {/* Button Block */}
+              <div className="w-full lg:w-auto flex justify-center lg:justify-start">
+                <button className="inline-flex items-center justify-center px-8 py-3 rounded-full bg-gradient-to-r from-blue-hosta to-vivid-cerise hover:from-vivid-cerise hover:to-medium-turquoise text-white font-medium transition-all duration-200">
+                  Get Started <ChevronRight className="ml-2 h-4 w-4" />
+                </button>
+              </div>
+            </div>
+
+
+
           </div>
+
         </div>
 
         <div

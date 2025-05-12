@@ -1,5 +1,3 @@
-"use client"
-
 import { useState, useEffect, useRef } from "react"
 
 function AnimatedCounter({ end, duration = 2000, prefix = "", suffix = "", decimals = 0 }) {

@@ -1,5 +1,6 @@
 import { useIntersectionObserver } from "../hooks/useIntersectionObserver"
-import keyImage from "../components/assets/keyImage.svg"
+// import keyImage from "../components/assets/keyImage.svg"
+import keyImage from "../components/assets/key_image1.svg"
 import RevealOnScroll from "./ui/RevealOnScroll"
 import GradientText from "./ui/GradientText"
 
@@ -31,7 +32,7 @@ function CTASection() {
               After the trial as low as only $15 per user per month. Start Your Free Trial Now!
             </p>
             <div className="hover:scale-105 transition-transform duration-300">
-              <button className="px-8 py-3 bg-gradient-to-r from-blue-hosta to-medium-turquoise hover:from-medium-turquoise hover:to-blue-hosta text-white rounded-full font-medium transition-colors duration-200">
+              <button className="px-8 py-3 bg-gradient-to-r from-blue-hosta to-vivid-cerise hover:from-vivid-cerise hover:to-blue-hosta text-white rounded-full font-medium transition-colors duration-200">
                 Start Your Free Trial Now
               </button>
             </div>
