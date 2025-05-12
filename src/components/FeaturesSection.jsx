@@ -208,7 +208,7 @@ function FeaturesSection() {
               <div className="flex flex-col md:flex-row items-center justify-between gap-8">
                 <div>
                   <h3 className="text-2xl md:text-3xl font-bold text-slate-300 mb-4">Ready to explore all features?</h3>
-                  <p className="text-lg text-slate-400">Discover how WORKWISE can transform your team's productivity</p>
+                  <p className="text-lg text-slate-400">Discover how <strong>Workwise</strong>  can transform your team's productivity</p>
                 </div>
 
                 <button className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-hosta to-vivid-cerise hover:from-vivid-cerise hover:to-blue-hosta text-white font-medium rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 group">

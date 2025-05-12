@@ -44,7 +44,7 @@ function Footer() {
         <RevealOnScroll animation="fade-up" delay={300}>
           <div className="mt-8 pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center md:items-center gap-y-6">
             <p className="text-sm text-slate-400 text-center md:text-left">
-              ©2016-{new Date().getFullYear()} WORKWISE. All rights reserved.
+              Copyrights ©2016-{new Date().getFullYear()} All rights reserved | Workwise
             </p>
 
             
