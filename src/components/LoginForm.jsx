@@ -7,6 +7,8 @@ function LoginForm() {
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
 
+  
+
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword)
   }
@@ -14,9 +16,10 @@ function LoginForm() {
   const handleSubmit = (e) => {
     e.preventDefault()
    
-    
+
     console.log("Login with:", email, password)
   }
+  
 
   const modules = [
     {

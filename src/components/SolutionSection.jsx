@@ -44,9 +44,9 @@ function SolutionSection() {
 
             <RevealOnScroll animation="fade-right" delay={200}>
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
-                One platform for{" "}
+                One Platform For{" "}
                 <GradientText from="from-blue-hosta" to="to-bright-sun">
-                  all your needs
+                  All Your Needs
                 </GradientText>
               </h2>
             </RevealOnScroll>

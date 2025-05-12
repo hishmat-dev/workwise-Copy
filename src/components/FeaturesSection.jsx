@@ -122,15 +122,15 @@ function FeaturesSection() {
       </div>
 
       <div className="container px-4 md:px-6 mx-auto">
-        <div className="text-center mb-16">
-          <RevealOnScroll animation="fade-down" delay={100}>
+        <div className="text-center mb-8">
+          {/* <RevealOnScroll animation="fade-down" delay={100}>
             <span className="inline-block px-4 py-1 rounded-full bg-blue-hosta/10 text-blue-hosta text-sm font-medium mb-4">
               Powerful Features
             </span>
-          </RevealOnScroll>
+          </RevealOnScroll> */}
 
           <RevealOnScroll animation="fade-up" delay={200}>
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
+            <h2 className="text-4xl md:text-5xl font-bold mb-2 text-white">
               <GradientText from="from-vivid-cerise" to="to-bright-sun">
                 Key Features
               </GradientText>
@@ -142,7 +142,7 @@ function FeaturesSection() {
           </RevealOnScroll>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-6">
           {features.map((feature, index) => (
             <RevealOnScroll key={index} animation="zoom-in" delay={400 + feature.delay} className="h-full">
               <div className="relative h-full group">
@@ -204,7 +204,7 @@ function FeaturesSection() {
           <div className="relative">
             <div className="absolute -inset-4 bg-gradient-to-r from-blue-hosta/20 via-waikawa-grey/20 to-vivid-cerise/20 rounded-3xl blur-xl"></div>
 
-            <div className="relative bg-gray-700 rounded-2xl shadow-xl border border-slate-100 p-8 md:p-12">
+            <div className="relative bg-gray-700 rounded-2xl shadow-xl border border-slate-100 p-6 md:p-8">
               <div className="flex flex-col md:flex-row items-center justify-between gap-8">
                 <div>
                   <h3 className="text-2xl md:text-3xl font-bold text-slate-300 mb-4">Ready to explore all features?</h3>

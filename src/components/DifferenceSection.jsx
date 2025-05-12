@@ -27,7 +27,7 @@ function DifferenceSection() {
           <RevealOnScroll animation="fade-up" delay={200}>
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
               <GradientText from="from-waikawa-grey" to="to-vivid-cerise">
-                What makes us different?
+                What Makes Us Different?
               </GradientText>
             </h2>
           </RevealOnScroll>
@@ -44,15 +44,24 @@ function DifferenceSection() {
           {/* Left side - Quote */}
           <div className="order-2 lg:order-1">
             <RevealOnScroll animation="fade-right" delay={400}>
-              <GlassCard background="bg-white/80" blur="backdrop-blur-lg" className="p-8 relative">
-                <div className="relative">
-                  <Quote className="absolute top-0 left-0 text-waikawa-grey/10 h-12 w-12 " />
-                  <p className="text-xl md:text-2xl text-slate-700 italic leading-relaxed pl-16">
+              <GlassCard
+                background="bg-white/80"
+                blur="backdrop-blur-lg"
+                className="bg-white rounded-xl p-8 border border-slate-200 shadow-lg relative transition-all duration-700 overflow-visible"
+                style={{ transitionDelay: "600ms" }}
+              >
+                {/* Quote Icon - Outside top-left of card content */}
+                <Quote className="absolute -top-6 -left-6 text-waikawa-grey/10 h-16 w-16 z-10" />
+
+                {/* Card Content */}
+                <div className="relative z-20">
+                  <p className="text-xl md:text-2xl text-slate-700 italic leading-relaxed">
                     "Today's workforce is under siege by a flood of communications apps. More than ever, our attention is scattered
                     across a wide array of different apps and communications channels. These apps are meant to bolster our
                     productivity, but managing myriad apps is proving difficult—with serious repercussions for businesses."
                   </p>
-                  <div className="mt-8 flex justify-end">
+
+                  <div className="mt-2 flex justify-end">
                     <div>
                       <p className="text-vivid-cerise font-bold">Riadh Dridi</p>
                       <p className="text-slate-600">CMO, RingCentral</p>
@@ -61,19 +70,18 @@ function DifferenceSection() {
                 </div>
 
                 {/* Gradient line */}
-                <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-waikawa-grey to-vivid-cerise"></div>
+                <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-waikawa-grey to-vivid-cerise z-10" />
               </GlassCard>
             </RevealOnScroll>
 
-
-            <RevealOnScroll animation="fade-up" delay={600} className="mt-8">
+            <RevealOnScroll animation="fade-up" delay={600} className="mt-7">
               <GlassCard
                 background="bg-gradient-to-r from-blue-hosta/10 to-bright-sun/10"
                 blur="backdrop-blur-sm"
                 border="border-0"
                 className="p-8"
               >
-                <h3 className="text-2xl font-bold text-slate-900 mb-6">
+                <h3 className="text-2xl font-bold text-slate-900 mb-4">
                   Making a company feel more connected, improving productivity and communication while making work fun.
                 </h3>
                 <button className="inline-flex items-center px-8 py-3 rounded-full bg-gradient-to-r from-waikawa-grey to-vivid-cerise hover:from-vivid-cerise hover:to-waikawa-grey text-white font-medium transition-all duration-300 transform hover:-translate-y-1 shadow-lg hover:shadow-xl group">
@@ -97,10 +105,10 @@ function DifferenceSection() {
                     Our Advantages
                   </h3>
 
-                  <div className="grid grid-cols-1 gap-3">
+                  <div className="grid grid-cols-1 gap-2">
                     {differences.map((item, index) => (
                       <RevealOnScroll key={index} animation="fade-up" delay={500 + index * 100}>
-                        <div className="flex items-start gap-4 p-4 rounded-xl hover:bg-slate-50 hover:cursor-pointer transition-colors duration-300 group">
+                        <div className="flex items-start gap-4 p-3 rounded-xl hover:bg-slate-50 hover:cursor-pointer transition-colors duration-300 group">
                           <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-gradient-to-br from-waikawa-grey to-vivid-cerise flex items-center justify-center transform group-hover:rotate-6 transition-all duration-300">
                             <CheckCircle className="h-6 w-6 text-white" />
                           </div>
