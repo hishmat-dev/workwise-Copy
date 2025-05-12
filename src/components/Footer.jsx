@@ -1,5 +1,5 @@
 import logo from '../components/assets/workwise_white.svg'
-import googlePlay from "../components/assets/googlePlay.png"
+import googlePlay from "../components/assets/googleplay.png"
 import appStore from "../components/assets/appStore.png"
 import mac from "../components/assets/apple.png"
 import windows from "../components/assets/windows.png"
