@@ -1,13 +1,17 @@
 import { useState } from "react"
 import { Eye, EyeOff, User, Lock, LogIn } from "lucide-react"
 import IconSlider from "./IconSlider"
+import { Link } from 'react-router-dom';
+
+import { useNavigate } from 'react-router-dom';
 
 function LoginForm() {
   const [showPassword, setShowPassword] = useState(false)
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
 
-  
+  const navigate = useNavigate();
+
 
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword)
@@ -15,11 +19,11 @@ function LoginForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-   
+
 
     console.log("Login with:", email, password)
   }
-  
+
 
   const modules = [
     {
@@ -121,19 +125,20 @@ function LoginForm() {
 
             </form>
             <div className="mt-4 flex flex-row justify-between text-sm">
-              <a href="#" className="text-blue-hosta text-[16px] hover:text-btn-color">
+              <Link to="/register" className="text-blue-hosta text-[16px] hover:text-btn-color hover:cursor-pointer">
                 Register
-              </a>
-              <a href="#" className="text-blue-hosta text-[16px] hover:text-btn-color">
+              </Link>
+              <Link to="/forgot-password" className="text-blue-hosta text-[16px] hover:text-btn-color hover:cursor-pointer">
                 Forgot Password?
-              </a>
+              </Link>
             </div>
+
           </div>
         </div>
       </div>
       <div className="mt-6 mb-6 p-2 flex flex-col shadow-xl bg-white/90 backdrop-blur-sm border-0 rounded-xl">
-      
-        <IconSlider/>
+
+        <IconSlider />
 
       </div>
     </>
