@@ -127,34 +127,51 @@ function SolutionSection() {
                       })}
                     </div>
 
-                    {/* Dashboard chart */}
                     <FloatingElement
-                      className="bg-white rounded-xl p-4 shadow-md border border-slate-100 h-40 mb-4"
+                      className="bg-white rounded-xl p-4 shadow-md border border-slate-100 h-auto mb-4"
                       xRange={5}
                       yRange={5}
                       rotateRange={1}
                       speed={8}
                     >
-                      <div className="h-full flex items-end justify-between gap-2 pt-6">
-                        {[35, 55, 40, 60, 75, 65, 80].map((height, i) => (
-                          <div key={i} className="relative group">
-                            <div
-                              className="w-8 bg-gradient-to-t from-blue-hosta to-bright-sun rounded-t-md transition-all duration-1000"
-                              style={{
-                                height: `${height}%`,
-                                animationDelay: `${i * 100}ms`,
-                                animation: "pulse 2s infinite alternate",
-                              }}
-                            ></div>
-                            <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 bg-slate-800 text-white text-xs py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                              {height}%
+                      <div className="space-y-4">
+                        <h3 className="text-slate-700 text-sm">Approval Process</h3>
+
+                      
+                        <div className="flex justify-between items-center">
+                        
+                          <div className="flex flex-col items-center">
+                            <div className="w-16 h-16 bg-blue-500 text-white flex items-center justify-center rounded-full">
+                              <span>1</span>
                             </div>
+                            <span className="text-xs text-slate-600 mt-2">Submit Request</span>
+                            <div className="w-4 h-4 bg-green-500 rounded-full mt-1" title="Approved"></div>
                           </div>
-                        ))}
+
+                        
+                          <div className="w-16 h-1 bg-blue-500 mx-4"></div>
+
+                          <div className="flex flex-col items-center">
+                            <div className="w-16 h-16 bg-blue-500 text-white flex items-center justify-center rounded-full">
+                              <span>2</span>
+                            </div>
+                            <span className="text-xs text-slate-600 mt-2">Manager Review</span>
+                            <div className="w-4 h-4 bg-yellow-400 rounded-full mt-1" title="Pending"></div>
+                          </div>
+
+                          <div className="w-16 h-1 bg-gray-300 mx-4"></div>
+
+                          <div className="flex flex-col items-center">
+                            <div className="w-16 h-16 bg-blue-500 text-white flex items-center justify-center rounded-full">
+                              <span>3</span>
+                            </div>
+                            <span className="text-xs text-slate-600 mt-2">Final Approval</span>
+                            <div className="w-4 h-4 bg-red-500 rounded-full mt-1" title="Rejected"></div>
+                          </div>
+                        </div>
                       </div>
                     </FloatingElement>
 
-                    {/* Dashboard footer */}
                     <FloatingElement
                       className="bg-white rounded-xl p-4 shadow-md border border-slate-100 flex justify-between items-center"
                       xRange={3}

@@ -32,20 +32,21 @@ function HeroSection() {
           className={`flex-1 space-y-8 text-center lg:text-left transition-all duration-700 ${isHeroVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
           style={{ transitionDelay: "100ms" }}
         >
-          <div className="space-y-2">
+          <div className="space-y-2 flex flex-col items-center lg:items-start">
             <div
-              className={`flex items-center justify-center lg:justify-start mt-2 mb-6 transition-all duration-700 ${isHeroVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+              className={`flex items-center justify-center lg:justify-start mt-2 mb-6 transition-all duration-700 ${isHeroVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+                }`}
               style={{ transitionDelay: "300ms" }}
             >
               <img src={logo} alt="WORKWISE Logo" className="h-80 w-auto" />
             </div>
 
-            <div>
+            <div className="text-center lg:text-left">
               <h1
-                className={`text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-slate-900 transition-all duration-700 ${isHeroVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+                className={`text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-slate-900 transition-all duration-700 ${isHeroVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+                  }`}
                 style={{ transitionDelay: "400ms" }}
               >
-
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-hosta to-vivid-cerise">
                   Corporate Social Solution
                 </span>
@@ -53,13 +54,14 @@ function HeroSection() {
             </div>
 
             <div
-              className={`flex flex-col lg:flex-row items-center justify-between mt-8 mb-6 gap-6 max-w-[800px] mx-auto transition-all duration-700 ${isHeroVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-                }`}
+              className={`flex flex-col lg:flex-row items-start lg:items-center justify-between w-full mt-8 mb-4 max-w-[800px] transition-all duration-700 ${
+                isHeroVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+              }`}
               style={{ transitionDelay: "500ms" }}
             >
-            
-              <div className="flex flex-col text-center lg:text-left w-full lg:w-auto">
-                <p className="text-base text-slate-600">
+              
+              <div className="flex flex-col lg:text-left w-full lg:w-auto mb-1">
+                <p className="text-base text-slate-600 mb-1">
                   Work from home the way it should be
                 </p>
                 <p className="text-base font-semibold text-slate-600">
@@ -67,16 +69,20 @@ function HeroSection() {
                 </p>
               </div>
 
-              {/* Button Block */}
-              <div className="w-full lg:w-auto flex justify-center lg:justify-start">
+              
+              {/* <div className="w-full lg:w-auto flex justify-center self-center lg:justify-end mb-2 mt-3 lg:mt-0">
                 <button className="inline-flex items-center justify-center px-8 py-3 rounded-full bg-gradient-to-r from-blue-hosta to-vivid-cerise hover:from-vivid-cerise hover:to-medium-turquoise text-white font-medium transition-all duration-200">
                   Get Started <ChevronRight className="ml-2 h-4 w-4" />
                 </button>
-              </div>
+              </div> */}
             </div>
 
 
-
+            <div className="w-full lg:w-auto flex justify-center lg:justify-start mb-2 ">
+              <button className="inline-flex items-center justify-center px-8 py-3 rounded-full bg-gradient-to-r from-blue-hosta to-vivid-cerise hover:from-vivid-cerise hover:to-medium-turquoise text-white font-medium transition-all duration-200">
+                Get Started <ChevronRight className="ml-2 h-4 w-4" />
+              </button>
+            </div>
           </div>
 
         </div>

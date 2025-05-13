@@ -1,4 +1,5 @@
-import Tooltip from '@mui/material/Tooltip';
+import { Tooltip } from 'antd'; // Import Tooltip from Ant Design
+import 'antd/dist/reset.css'; // Ensure Ant Design styles are imported
 
 const modules = [
   { title: "News Feed", icon: "https://workw.com/static/media/News%20Feed.39a4e27ce8d085fd12239c9105e2d300.svg" },
@@ -15,7 +16,6 @@ const modules = [
   { title: "Chart Accounts", icon: "https://workw.com/static/media/chartAccountsIcon.aeba4763829d93cab322f702239b7183.svg" },
 ];
 
-
 const IconSlider = () => {
   const renderCount = 50;
   const duplicatedModules = Array.from({ length: renderCount }, (_, i) => modules[i % modules.length]);
@@ -29,11 +29,8 @@ const IconSlider = () => {
         style={{ width: 'max-content' }}
       >
         {duplicatedModules.map((module, index) => (
-          <Tooltip key={index} title={module.title} placement="top" arrow >
-            <div
-              className="flex-shrink-0 w-14 h-14 flex items-center justify-center"
-              // onMouseEnter={() => console.log(`Hovered: ${module.title}`)}
-            >
+          <Tooltip key={index} title={module.title} placement="top">
+            <div className="flex-shrink-0 w-14 h-14 flex items-center justify-center">
               <img src={module.icon} alt={module.title} className="h-8 w-8 object-contain" />
             </div>
           </Tooltip>
