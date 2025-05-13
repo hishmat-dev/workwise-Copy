@@ -137,9 +137,7 @@ function LoginForm() {
         </div>
       </div>
       <div className="mt-6 mb-6 p-2 flex flex-col shadow-xl bg-white/90 backdrop-blur-sm border-0 rounded-xl">
-
         <IconSlider />
-
       </div>
     </>
 
